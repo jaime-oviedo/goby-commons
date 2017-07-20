@@ -8,11 +8,11 @@ package com.ingenium.commons.util;
  * <!-- begin-UML-doc -->
  * Excepción&nbsp;que&nbsp;captura&nbsp;problemas&nbsp;que&nbsp;impiden&nbsp;la&nbsp;extracción&nbsp;de&nbsp;información.<br><br>@author&nbsp;JaimeRodrigo
  * <!-- end-UML-doc -->
- * @author joviedo
+ * @author JaimeRodrigo
  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
  */
 public class DownloadException extends Exception {
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * Identificador&nbsp;de&nbsp;serie&nbsp;de&nbsp;la&nbsp;clase.
@@ -20,11 +20,12 @@ public class DownloadException extends Exception {
   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
   */
   private static final long serialVersionUID = 1797242167551088990L;
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * Crea&nbsp;una&nbsp;nueva&nbsp;instancia&nbsp;de&nbsp;ExtractionException.
   * <!-- end-UML-doc -->
+  * Crea una nueva instancia de la clase DownloadException.
   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
   */
   public DownloadException() {
@@ -32,11 +33,12 @@ public class DownloadException extends Exception {
     super();
     // end-user-code
   }
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * Crea&nbsp;una&nbsp;nueva&nbsp;instancia&nbsp;de&nbsp;ExtractionException&nbsp;usando&nbsp;un&nbsp;mensaje&nbsp;de<br>explicación.
   * <!-- end-UML-doc -->
+  * Crea una nueva instancia de la clase DownloadException.
   * @param message
   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
   */
@@ -45,5 +47,5 @@ public class DownloadException extends Exception {
     super(message);
     // end-user-code
   }
-
+  
 }

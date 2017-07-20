@@ -20,51 +20,48 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-/**
- * <!-- begin-UML-doc --> <!-- end-UML-doc -->
- *
- * @author joviedo
+/** 
+ * <!-- begin-UML-doc -->
+ * <!-- end-UML-doc -->
+ * @author JaimeRodrigo
  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
  */
 public class BulkCsvFilesMerger {
-  /**
-   * <!-- begin-UML-doc --> <!-- end-UML-doc -->
-   *
-   * @param souceDirectory
-   * @param destinationDirectory
-   * @param destinationFileName
-   * @return
-   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-   */
-  public static List<String[]> merge(String souceDirectory,
-      String destinationDirectory, String destinationFileName) {
+  /** 
+  * <!-- begin-UML-doc -->
+  * <!-- end-UML-doc -->
+  * @param souceDirectory
+  * @param destinationDirectory
+  * @param destinationFileName
+  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
+  */
+  public static void merge(String souceDirectory, String destinationDirectory,
+      String destinationFileName) {
     // begin-user-code
-    return BulkCsvFilesMerger.merge(souceDirectory, destinationDirectory,
+    BulkCsvFilesMerger.merge(souceDirectory, destinationDirectory,
         destinationFileName, 0);
-
+    
     // end-user-code
   }
-
-  /**
-   * <!-- begin-UML-doc --> <!-- end-UML-doc -->
-   *
-   * @param souceDirectory
-   * @param destinationDirectory
-   * @param destinationFileName
-   * @param linesToSkip
-   * @return
-   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
-   */
-  public static List<String[]> merge(String souceDirectory,
-      String destinationDirectory, String destinationFileName,
-      int linesToSkip) {
+  
+  /** 
+  * <!-- begin-UML-doc -->
+  * <!-- end-UML-doc -->
+  * @param souceDirectory
+  * @param destinationDirectory
+  * @param destinationFileName
+  * @param linesToSkip
+  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
+  */
+  public static void merge(String souceDirectory, String destinationDirectory,
+      String destinationFileName, int linesToSkip) {
     // begin-user-code
     String destination = new StringBuffer(destinationDirectory)
         .append(File.separator).append(destinationFileName).toString();
     File dir = new File(souceDirectory);
     File[] sources = dir.listFiles();
     if (sources == null) {
-      return null;
+      return;
     }
     List<String[]> csvEntries = new ArrayList<>(100);
     FileInputStream is = null;
@@ -119,14 +116,14 @@ public class BulkCsvFilesMerger {
         }
       }
     }
-
+    
     if (destinationDirectory == null) {
-      return csvEntries;
+      return;
     }
     if (destinationDirectory.equals("")) {
-      return csvEntries;
+      return;
     }
-
+    
     File destinationDirectoryAsFile = new File(destinationDirectory);
     try {
       FileUtils.deleteDirectory(destinationDirectoryAsFile);
@@ -151,9 +148,8 @@ public class BulkCsvFilesMerger {
           e.printStackTrace();
         }
       }
-
+      
     }
-    return csvEntries;
     // end-user-code
   }
 }

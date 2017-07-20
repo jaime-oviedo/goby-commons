@@ -16,22 +16,23 @@ import java.net.URLConnection;
  * <!-- begin-UML-doc -->
  * Esta&nbsp;clase&nbsp;permite&nbsp;la&nbsp;descarga&nbsp;de&nbsp;un&nbsp;archivo&nbsp;desde&nbsp;un&nbsp;sitio&nbsp;Web.<br><br>@author&nbsp;JaimeRodrigo
  * <!-- end-UML-doc -->
- * @author joviedo
+ * @author JaimeRodrigo
  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
  */
 public class SimpleFileDownloader {
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * <!-- end-UML-doc -->
   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
   */
   private static final int BUFFER_SIZE = 4096;
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * Crea&nbsp;una&nbsp;nueva&nbsp;instancia&nbsp;de&nbsp;la&nbsp;clase&nbsp;SimpleFileDownloader.
   * <!-- end-UML-doc -->
+  * Crea una nueva instancia de la clase SimpleFileDownloader.
   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
   */
   public SimpleFileDownloader() {
@@ -39,11 +40,11 @@ public class SimpleFileDownloader {
     super();
     // end-user-code
   }
-
+  
   /*
    * (non-Javadoc)
-   *
-   * @see com.ingenium.commons.util.Downloader#download(java.lang.String, java.lang.String)
+   * @see com.ingenium.commons.util.Downloader#download(java.lang.String,
+   * java.lang.String)
    */
   /** 
   * <!-- begin-UML-doc -->
@@ -64,14 +65,14 @@ public class SimpleFileDownloader {
       return;
     }
     final int responseCode = httpConn.getResponseCode();
-
+    
     // always check HTTP response code first
     if (responseCode == HttpURLConnection.HTTP_OK) {
       String fileName = "";
       final String disposition = httpConn.getHeaderField("Content-Disposition");
       final String contentType = httpConn.getContentType();
       final int contentLength = httpConn.getContentLength();
-
+      
       if (disposition != null) {
         // extracts file name from header field
         final int index = disposition.indexOf("filename=");
@@ -131,5 +132,5 @@ public class SimpleFileDownloader {
     // }
     // end-user-code
   }
-
+  
 }

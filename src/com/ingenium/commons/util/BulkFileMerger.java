@@ -19,7 +19,7 @@ import org.apache.commons.io.IOUtils;
 /** 
  * <!-- begin-UML-doc -->
  * <!-- end-UML-doc -->
- * @author joviedo
+ * @author JaimeRodrigo
  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
  */
 public class BulkFileMerger {
@@ -46,7 +46,7 @@ public class BulkFileMerger {
     try {
       output = new BufferedOutputStream(
           new FileOutputStream(destination, true));
-
+      
       for (final File source : sources) {
         input = new BufferedInputStream(new FileInputStream(source));
         IOUtils.copy(input, output);
@@ -56,7 +56,7 @@ public class BulkFileMerger {
     } catch (final IOException e) {
       e.printStackTrace();
     }
-
+    
     finally {
       if (output != null) {
         try {
@@ -74,10 +74,10 @@ public class BulkFileMerger {
           }
         }
       }
-
+      
       IOUtils.closeQuietly(output);
     }
     // end-user-code
   }
-
+  
 }

@@ -7,7 +7,7 @@ package com.ingenium.commons.util;
 /** 
  * <!-- begin-UML-doc -->
  * <!-- end-UML-doc -->
- * @author joviedo
+ * @author JaimeRodrigo
  * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
  */
 public abstract class AbstractDownloader implements Downloader {
@@ -23,7 +23,7 @@ public abstract class AbstractDownloader implements Downloader {
   * @generated "UML to Java (com.ibm.xtools.transform.uml2.java5.internal.UML2JavaTransform)"
   */
   private String destination;
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * <p>Sets the location of the destination file.</p>
@@ -37,7 +37,7 @@ public abstract class AbstractDownloader implements Downloader {
     this.destination = destination;
     // end-user-code
   }
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * <p>Sets the location of the source file.</p>
@@ -51,7 +51,7 @@ public abstract class AbstractDownloader implements Downloader {
     this.source = source;
     // end-user-code
   }
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * <p>Gets the location of the destination file.</p>
@@ -65,7 +65,7 @@ public abstract class AbstractDownloader implements Downloader {
     return destination;
     // end-user-code
   }
-
+  
   /** 
   * <!-- begin-UML-doc -->
   * <p>Gets the location of the source file.</p>
